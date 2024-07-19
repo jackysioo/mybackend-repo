@@ -27,7 +27,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['ec2-18-117-134-67.us-east-2.compute.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-18-117-134-67.us-east-2.compute.amazonaws.com', 'localhost']
 
 
 # Application definition
@@ -56,7 +56,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "http://localhost:3000", "http://my-frontend-bucket-js.s3-website.us-east-2.amazonaws.com"
 ]
 
 ROOT_URLCONF = 'mybackend.urls'
